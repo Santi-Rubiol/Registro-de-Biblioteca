@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI APP</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="script.js" defer></script> -->
+    <script src="prestamos.js" defer></script>
+    <script src="libros.js" defer></script>
+    <script src="alumnos.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+ 
+</head>
+
+<header>
+    <h1 id="titulo">Proyecto Final</h1>
+</header>
+
+<body>
+    <div class="container-fluid" id="body">
+        <div class="row">
+            <div class="col-6" id="cuadroIngreso">
+                <h2>Libros</h2>
+                <div class="row" id="filaIngreso">
+                    <div class="col-4" id="etiqueta">
+                        <label for="tit">Título: </label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" id="tit">
+                    </div>
+                </div>
+                <div class="row" id="filaIngreso">
+                    <div class="col-4" id="etiqueta">
+                        <label for="aut">Autor: </label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" id="aut">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-6" id="cuadroIngreso">
+                <h2>Alumnos</h2>
+                <div class="row" id="filaIngreso">
+                    <div class="col-4" id="etiqueta">
+                        <label for="dni">DNI: </label>
+                    </div>
+                    <div class="col-8">
+                        <input type="number" id="dni">
+                    </div>
+                </div>
+                <div class="row" id="filaIngreso">
+                    <div class="col-4" id="etiqueta">
+                        <label for="nom">Nombre: </label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" id="nom">
+                    </div>
+                </div>
+                <div class="row" id="filaIngreso">
+                    <div class="col-4" id="etiqueta">
+                        <label for="direc">Dirección: </label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" id="direc">
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-6" id="cuadroIngreso">
+                <button id="btnAgLibro" onclick="guardarLibro()">Agregar Libro</button>
+                <button id="btnActLibro" onclick="actualizarLibro()" hidden>Actualizar Libro</button>
+            </div>
+            <div class="col-6" id="cuadroIngreso">
+                <button id="btnAgAlumno" onclick="guardarAlumno()">Agregar Alumno</button>
+                <button id="btnActAlumno" onclick="actualizarAlumno()" hidden>Actualizar Alumno</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <table class="table table-hover">
+                    <thead id="headTableLib"></thead>
+                    <tbody id="bodyTableLib"></tbody>
+                </table>
+            </div>
+            <div class="col-6">
+                <table class="table table-hover">
+                    <thead id="headTableAlu"></thead>
+                    <tbody id="bodyTableAlu"></tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-8" id="cuadroIngreso">
+                <h2>Préstamos</h2>
+                <div class="row" id="filaIngreso">
+                    <div class="col-4">
+                        <label for="fecEnt">Fecha entrega: </label>
+                    </div>
+                    <div class="col-8">
+                        <input type="date" id="fecEnt">
+                    </div>
+                </div>
+                <div class="row" id="filaIngreso">
+                    <div class="col-4">
+                        <label for="fecDev">Fecha devolución: </label>
+                    </div>
+                    <div class="col-8">
+                        <input type="date" id="fecDev">
+                        <button onclick="limpiarFecDev()">Limpiar</button>
+                    </div>
+                </div>
+                <div class="row" id="filaIngreso">
+                    <div class="col-4">
+                        <label for="libID">Libro: </label>
+                    </div>
+                    <div class="col-8">
+                        <select id="libID" name="libID">
+                        </select>
+                    </div>
+                </div>
+                <div class="row" id="filaIngreso">
+                    <div class="col-4">
+                        <label for="aluID">Alumno: </label>
+                    </div>
+                    <div class="col-8">
+                        <select id="aluID" name="aluID"></select>
+                    </div>
+                </div>
+                <br>
+
+                <button id="btnAgPres" onclick="guardarPrestamo()">Agregar Préstamo</button>
+                <button id="btnActPres" onclick="actualizarPrestamo()" hidden>Actualizar Préstamo</button>
+                <p id="muestError"></p>
+            </div>
+            <div class="row">
+                <hr>
+                <table class="table table-hover">
+                    <thead id="headTablePres"></thead>
+                    <tbody id="bodyTablePres"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <p>Rubiol Santiago - Comisión 6</p>
+</footer>
+    
+</html>
+<!-- json-server -w db.json -->

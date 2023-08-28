@@ -1,0 +1,118 @@
+{
+  "libros": [
+    {
+      "titulo": "Historia de la Selva",
+      "autor": "Jorge",
+      "id": 5
+    },
+    {
+      "titulo": "Star Wars",
+      "autor": "George Lucas",
+      "id": 6
+    },
+    {
+      "titulo": "Autobiografía: Messi",
+      "autor": "Leo Messi",
+      "id": 7
+    },
+    {
+      "titulo": "Harry Potter",
+      "autor": "J. K. Rowling",
+      "id": 8
+    },
+    {
+      "titulo": "1984",
+      "autor": "George Orwell",
+      "id": 9
+    },
+    {
+      "titulo": "El Señor de los Anillos",
+      "autor": "J.R.R. Tolkien",
+      "id": 10
+    },
+    {
+      "titulo": "Lo que el viento se llevó",
+      "autor": "Margaret Mitchell",
+      "id": 11
+    },
+    {
+      "titulo": "Ratón Perez",
+      "autor": "Ramiro R.",
+      "id": 12
+    },
+    {
+      "titulo": "La Biblia",
+      "autor": "Juan",
+      "id": 13
+    }
+  ],
+  "alumnos": [
+    {
+      "id": 1,
+      "dni": "45478652",
+      "nombre": "Juan Perez",
+      "direccion": "Av. Roca 3078"
+    },
+    {
+      "dni": "43162378",
+      "nombre": "Santiago",
+      "direccion": "barrio Policial 3",
+      "id": 3
+    },
+    {
+      "dni": "40125478",
+      "nombre": "Julián Alvarez",
+      "direccion": "Nuñez",
+      "id": 4
+    },
+    {
+      "dni": "25478963",
+      "nombre": "Jorge Perez",
+      "direccion": "Las piedras",
+      "id": 5
+    },
+    {
+      "dni": "34687956",
+      "nombre": "Lucas L.",
+      "direccion": "Fco. de Aguirre",
+      "id": 6
+    }
+  ],
+  "prestamos": [
+    {
+      "fechaEntrega": "2022-11-03",
+      "fechaDevolucion": "2022-11-05",
+      "libroId": "5",
+      "alumnoId": "1",
+      "id": 1
+    },
+    {
+      "fechaEntrega": "2022-11-17",
+      "fechaDevolucion": "2022-11-23",
+      "libroId": "5",
+      "alumnoId": "5",
+      "id": 2
+    },
+    {
+      "fechaEntrega": "2022-11-17",
+      "fechaDevolucion": "",
+      "libroId": "8",
+      "alumnoId": "6",
+      "id": 3
+    },
+    {
+      "fechaEntrega": "2022-11-13",
+      "fechaDevolucion": "2022-11-19",
+      "libroId": "11",
+      "alumnoId": "3",
+      "id": 4
+    },
+    {
+      "fechaEntrega": "2022-11-09",
+      "fechaDevolucion": "2022-11-18",
+      "libroId": "13",
+      "alumnoId": "4",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+header{
+    text-align: center;
+    background-color: #E37222;
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+#body{
+    padding: 15px;
+    background-color: rgb(212, 209, 209);
+    margin-top: 0;
+}
+
+footer{
+    background-color: #E37222;
+    color: black;
+    border-top: 3px solid black;
+    padding: 2px;
+    font-size: 18px;
+}
+
+h2{
+    text-align: center;
+    color: black;
+}
+
+#cuadroIngreso{
+    text-align: center;
+    background-color: #66B9Bf;
+    border: black solid 3px;
+    padding: 10px;
+}
+
+label{
+    color: black;
+    font-size: 19px;
+}
+
+select{
+    background-color: #EEAA7B;
+}
+
+input{
+    background-color: #EEAA7B;
+}
+
+button{
+    background-color: #EEAA7B;
+}
+
+#filaIngreso{
+    padding: 2px;
+}
+
+.col-4{
+    text-align: right;
+}
+
+.col-8{
+    text-align: left;
+}
+
+#muestError{
+    color: red;
+    text-align: left;
+}
+
+/* Fila cabecera */
+thead tr{ 
+    border: black solid 2px;
+    color: black;
+    background-color: #E37222;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* Celda cabecera */
+thead th{
+    border: solid black 2px;
+}
+
+/* Fila cuadro */
+tbody tr{
+    color: black;
+    background-color: #66B9Bf;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 5px;
+}
+
+/* Celda cuadro */
+tbody td{
+    border: solid black 2px;
+}
+
+#btnModificar{
+    background-color: bisque;
+}
+
+#btnBorrar{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+tbody > tr:hover{
+    background: #28B6CC;
+}
+
+#celdaRoja{
+    background-color: rgb(238, 77, 77);
+}
